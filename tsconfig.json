@@ -12,6 +12,7 @@
     "downlevelIteration": true,
     "strict": false,
     "allowJs": true,
+    "checkJs": false,
     "noImplicitThis": true,
     "noUnusedParameters": false,
     "noImplicitReturns": true,
@@ -23,7 +24,7 @@
     "experimentalDecorators": true,
     "noImplicitAny": false,
     "strictNullChecks": false,
-    "moduleResolution": "node",
+    "moduleResolution": "Bundler",
     "importHelpers": true,
     "paths": {
       "@/*": [

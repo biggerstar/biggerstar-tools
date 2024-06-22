@@ -41,7 +41,7 @@ export default defineViteRunConfig({
           watch: {},
           external: [
             '@biggerstar/mitt-bus',
-            'is-what/dist',
+            // 'is-what/dist',
           ],
           output: {}
         },
@@ -53,14 +53,14 @@ export default defineViteRunConfig({
 function getBaseConfig(options: ViteRunHandleFunctionOptions) {
   return {
     resolve: {
-      extensions: [".ts", ".js", '.css'],
+      extensions: [".ts", ".js", '.d.ts', '.css'],
       alias: {
         "@": resolve(options.packagePath, 'src'),
         types: resolve(options.packagePath, 'src/types')
       }
     },
     build: {
-      emptyOutDir: false,
+      emptyOutDir: true,
       minify: false,
       rollupOptions: {
         output: {
@@ -72,7 +72,7 @@ function getBaseConfig(options: ViteRunHandleFunctionOptions) {
     },
     plugins: [
       dtsPlugin({
-        // rollupTypes: true,
+        rollupTypes: true,
         copyDtsFiles: true,
         clearPureImport: true
       }),
