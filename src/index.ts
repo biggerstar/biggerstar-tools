@@ -5,4 +5,3 @@ export * from './class'
 export * from '@biggerstar/mitt-bus'
 export * from 'is-what/dist'
 
-

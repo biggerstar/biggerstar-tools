@@ -1,17 +1,29 @@
 {
   "name": "@biggerstar/tools",
   "version": "0.0.1",
-  "main": "index.js",
-  "scripts": {},
-  "author": "",
-  "license": "ISC",
+  "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "typings": "./dist/index.d.ts",
+  "scripts": {
+    "dev": "vite-run dev -y",
+    "build": "vite-run build -y"
+  },
+  "files": [
+    "dist"
+  ],
+  "author": "biggerstar",
+  "license": "MIT",
   "description": "",
   "dependencies": {
     "@biggerstar/mitt-bus": "^0.0.10",
     "is-what": "^5.0.2"
   },
   "devDependencies": {
+    "@types/node": "^20.14.8",
     "vite": "^5.3.1",
+    "vite-plugin-dts": "^3.9.1",
     "vite-run": "^1.7.1"
   }
 }

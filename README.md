@@ -2,8 +2,8 @@
 
 ### 函数
 
-- `everyHasKeys`
-  判断两个对象是否都有某个或多个 key
+- `sleep`
+  延时函数
 
 - `generateRandomString`
   随机生成一个字符串 key
@@ -20,8 +20,8 @@
 - `clearPromiseInterval`
   清除 Promise 定时器
 
-- `sleep`
-  延时函数
+- `everyHasKeys`
+  判断两个对象是否都有某个或多个 key
 
 
 ### 构造类
@@ -31,4 +31,4 @@
 ### 代理其他库
 
 - `@biggerstar/mitt-bus` 基于 mitt 的可继承形式的对象
-- `is-what` 类型判断
+- `is-what` 常用类型判断
