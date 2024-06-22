@@ -23,12 +23,10 @@
 - `everyHasKeys`
   判断两个对象是否都有某个或多个 key
 
-
 ### 构造类
-
-
 
 ### 代理其他库
 
 - `@biggerstar/mitt-bus` 基于 mitt 的可继承形式的对象
-- `is-what` 常用类型判断
+- `@biggerstar/deepmerge` 深度合并，默认强制合并，可选安全合并
+- `lodash-es` 常用工具函数

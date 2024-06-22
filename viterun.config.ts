@@ -36,7 +36,7 @@ export default defineViteRunConfig({
           formats: ['es'],
           name: options.name,
           fileName: (_: string) => `index.js`,
-        }, 
+        },
         rollupOptions: {
           watch: {},
           external: [
