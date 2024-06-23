@@ -29,4 +29,4 @@
 
 - `@biggerstar/mitt-bus` 基于 mitt 的可继承形式的对象
 - `@biggerstar/deepmerge` 深度合并，默认强制合并，可选安全合并
-- `lodash-es` 常用工具函数
+- `is-what` 常用工具函数
