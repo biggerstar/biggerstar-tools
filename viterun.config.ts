@@ -11,6 +11,7 @@ export default defineViteRunConfig({
     '@biggerstar-tools': {
       build: [
         ['es', 'build_lib'],
+        ['cjs', 'build_lib'],
       ],
       dev: [
         ['es', 'watch', 'build_lib']
@@ -23,6 +24,11 @@ export default defineViteRunConfig({
         formats: ['es']
       },
     },
+    cjs: {
+      lib: {
+        formats: ['cjs']
+      },
+    },
     watch: {
       watch: {},
     },
@@ -33,14 +39,15 @@ export default defineViteRunConfig({
       return {
         lib: {
           entry: resolve(options.packagePath, 'src/index.ts'),
-          formats: ['es'],
           name: options.name,
-          fileName: (_: string) => `index.js`,
+          fileName: (fm: string) => {
+            return fm === 'es' ? `index.js` : `index.cjs`;
+          },
         },
         rollupOptions: {
           watch: {},
           external: [
-            '@biggerstar/mitt-bus',
+            // '@biggerstar/mitt-bus',
             // 'is-what/dist',
           ],
           output: {}
@@ -60,7 +67,7 @@ function getBaseConfig(options: ViteRunHandleFunctionOptions) {
       }
     },
     build: {
-      emptyOutDir: true,
+      emptyOutDir: false,
       minify: false,
       rollupOptions: {
         output: {
